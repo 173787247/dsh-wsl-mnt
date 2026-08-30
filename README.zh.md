@@ -1,6 +1,4 @@
-# 
-
-DeepSeek Harness 工具：**${tool}** — 
+# dsh-wsl-mnt
 
 DeepSeek Harness 工具：**`mnt_doctor`** — 检测 /mnt/c 工作区（慢 I/O + CRLF）并建议迁到 Linux home。
 
@@ -28,8 +26,8 @@ dsh plugin --profile web add github:173787247/dsh-wsl-mnt
 - id: dsh-wsl-mnt
   name: dsh-wsl-mnt
   config:
-        timeoutMs: 15000
-        scanLimit: 50
+    timeoutMs: 15000
+    scanLimit: 50
 ```
 
 | 键 | 默认 | 含义 |

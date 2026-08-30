@@ -1,8 +1,6 @@
-# 
+# dsh-wsl-mnt
 
-DeepSeek Harness tool: **${tool}** — 
-
-DeepSeek Harness tool: **`mnt_doctor`** — DeepSeek Harness tool: detect /mnt/c workspaces (slow I/O + CRLF) and advise moving to Linux home.
+DeepSeek Harness tool: **`mnt_doctor`** — detect /mnt/c workspaces (slow I/O + CRLF) and advise moving to Linux home.
 
 Part of **[dsh-wsl-kit](https://github.com/173787247/dsh-wsl-kit)**.
 
@@ -28,8 +26,8 @@ Restart `dsh web`. New session → Tools should list `mnt_doctor`.
 - id: dsh-wsl-mnt
   name: dsh-wsl-mnt
   config:
-        timeoutMs: 15000
-        scanLimit: 50
+    timeoutMs: 15000
+    scanLimit: 50
 ```
 
 | Key | Default | Meaning |
