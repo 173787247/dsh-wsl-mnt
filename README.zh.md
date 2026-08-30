@@ -1,4 +1,6 @@
-# dsh-wsl-mnt
+# 
+
+DeepSeek Harness 工具：**${tool}** — 
 
 DeepSeek Harness 工具：**`mnt_doctor`** — 检测 /mnt/c 工作区（慢 I/O + CRLF）并建议迁到 Linux home。
 

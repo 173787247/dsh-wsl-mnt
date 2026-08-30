@@ -1,4 +1,6 @@
-# dsh-wsl-mnt
+# 
+
+DeepSeek Harness tool: **${tool}** — 
 
 DeepSeek Harness tool: **`mnt_doctor`** — DeepSeek Harness tool: detect /mnt/c workspaces (slow I/O + CRLF) and advise moving to Linux home.
 
