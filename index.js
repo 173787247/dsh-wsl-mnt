@@ -66,7 +66,7 @@ export function apply(ctx, config = {}) {
       }
       const raw = typeof args?.path === "string" && args.path.trim()
         ? args.path.trim()
-        : process.cwd();
+        : process.cwd().replace(/\\/g, "/");
       const classified = classifyMountPath(raw);
       let sample = { scanned: 0, crlfCount: 0, crlfSamples: [] };
       if (classified.underDrvFs) {
