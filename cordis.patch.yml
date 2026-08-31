@@ -2,5 +2,4 @@
     - id: dsh-wsl-mnt
       name: dsh-wsl-mnt
       config:
-        timeoutMs: 15000
-        scanLimit: 50
+        timeoutMs: 10000
