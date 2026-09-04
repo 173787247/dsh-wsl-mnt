@@ -1,7 +1,7 @@
 {
   "name": "dsh-wsl-mnt",
-  "version": "0.1.0",
-  "description": "Warn when the workspace lives on slow /mnt/c and suggest a Linux home path.",
+  "version": "0.2.0",
+  "description": "mnt_doctor: detect slow /mnt/c workspaces, git-on-NTFS, suggest Linux home paths.",
   "license": "MIT",
   "repository": {
     "type": "git",

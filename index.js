@@ -11,12 +11,12 @@ export function apply(ctx, config = {}) {
   ctx.systemPrompt.section({
     name: "tool:mnt_doctor",
     order: 117,
-    text: "Use mnt_doctor for WSL/Windows interop: Warn when the workspace lives on slow /mnt/c and suggest a Linux home path.",
+    text: "Use mnt_doctor when git/npm feels slow or the workspace is under /mnt/c: classifies Desktop/Downloads, detects .git on NTFS, suggests a ~/src/… Linux path, and points to encoding_doctor for CRLF scripts.",
   });
 
   ctx.tools.register({
     name: "mnt_doctor",
-    description: "Warn when the workspace lives on slow /mnt/c and suggest a Linux home path.",
+    description: "Classify whether the workspace is on slow /mnt (drive, Desktop, .git) and suggest a Linux home path.",
     parameters: core.parameters(config),
     output: {
       schema: core.outputSchema(),
