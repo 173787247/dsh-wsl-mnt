@@ -6,6 +6,18 @@
 
 [English → README.md](./README.md)
 
+## 在套件里的位置
+
+标出工作区在 /mnt/c（git 慢、NTFS）。提示时应改用 Linux home。
+
+```mermaid
+flowchart LR
+  agent["dsh agent"] --> tool["mnt_doctor"] --> mnt["/mnt/c 对比 Linux home"]
+```
+
+整套关系图和版本快照：[dsh-wsl-kit 中文说明](https://github.com/173787247/dsh-wsl-kit/blob/master/README.zh.md)。本插件是 **0.2.0**（full）。不要把那份总表抄进本 README。
+
+
 ## 兼容性
 
 | 项 | 值 |
