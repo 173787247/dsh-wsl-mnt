@@ -4,20 +4,20 @@ import { buildMntAdvice, classifyMntPath, format } from "../lib/mnt.js";
 
 describe("classifyMntPath", () => {
   it("flags /mnt/c Desktop and suggests home", () => {
-    const info = classifyMntPath("/mnt/c/Users/rchua/Desktop/AIFullStackDevelopment", {
-      home: "/home/rchua",
+    const info = classifyMntPath("/mnt/c/Users/alice/Desktop/AIFullStackDevelopment", {
+      home: "/home/alice",
       exists: (p) => p.endsWith("/.git"),
     });
     assert.equal(info.onMnt, true);
     assert.equal(info.drive, "c");
     assert.equal(info.kind, "windows_user_folder");
     assert.equal(info.hasGit, true);
-    assert.match(info.suggestedHome, /\/home\/rchua\/src\/AIFullStackDevelopment/);
+    assert.match(info.suggestedHome, /\/home\/alice\/src\/AIFullStackDevelopment/);
   });
 
   it("accepts linux home", () => {
-    const info = classifyMntPath("/home/rchua/proj", {
-      home: "/home/rchua",
+    const info = classifyMntPath("/home/alice/proj", {
+      home: "/home/alice",
       exists: () => false,
     });
     assert.equal(info.onMnt, false);
@@ -32,7 +32,7 @@ describe("buildMntAdvice", () => {
       drive: "c",
       kind: "windows_users",
       hasGit: true,
-      suggestedHome: "/home/rchua/src/x",
+      suggestedHome: "/home/alice/src/x",
     });
     assert.ok(tips.some((t) => /\.git on \/mnt/i.test(t)));
     assert.ok(tips.some((t) => /CRLF/i.test(t)));
